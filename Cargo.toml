@@ -1,0 +1,19 @@
+[package]
+name = "process-diagnostics"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Linux-first process execution diagnostics with bounded transcripts"
+license = "MIT"
+repository = "https://github.com/joshiii-xyz/process-diagnostics"
+keywords = ["process", "diagnostics", "signals", "timeout", "transcript"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+base64 = "0.22"
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
