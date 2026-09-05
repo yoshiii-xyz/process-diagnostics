@@ -5,7 +5,7 @@ program and arguments, environment policy, bounded stdout and stderr, process
 group policy, timeout or cancellation policy, duration, and exit
 classification.
 
-Status: 0.1.0 implementation pending release evidence.
+Status: released v0.1.0.
 
 CI: https://github.com/joshiii-xyz/process-diagnostics/actions
 
@@ -56,43 +56,3 @@ list.
 - Exit code 0 means the command completed successfully, or a transcript was
   replayed.
 - Exit code 1 means the command was nonzero, signaled, cancelled, or timed
-  out.
-- Exit code 2 means the command could not be spawned, a transcript could not
-  be decoded, or CLI rendering failed.
-
-Capture is capped at 8 MiB per stream. Transcript JSON is capped at 24 MiB.
-Timeouts are capped at 10 minutes by the CLI. Truncation and all configured
-policies are recorded.
-
-## Safety and data handling
-
-The tool does not interpret shell metacharacters, expand pipelines, run a task
-file, or upload output. A caller can explicitly choose a shell as the program,
-but its shell semantics then belong to that supplied program. Transcripts can
-contain explicit environment values, paths, command arguments, and error
-output, so store them with suitable permissions.
-
-## Limits and non-goals
-
-See [`docs/limits.md`](docs/limits.md). Linux is the only release-tested
-platform. Windows job objects, PTYs, cross-platform signal behavior, and
-perfect process-tree accounting are extension points, not current claims.
-
-This is not a shell, task runner, pipeline engine, job scheduler, or general
-process supervisor.
-
-## Testing and development
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/release.md`](docs/release.md)
-for the verified command set.
-
-## Research
-
-See [`docs/research.md`](docs/research.md) for the Rust process API source
-trail and the distinction between documented behavior and design inference.
-
-## Release and support status
-
-The 0.1.0 release is pending local and hosted evidence. The release record
-will be updated only after the exact package, checksum, docs.rs, CI, security,
-CodeQL, tag package, and fresh-install checks pass.
