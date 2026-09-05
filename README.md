@@ -5,7 +5,7 @@ program and arguments, environment policy, bounded stdout and stderr, process
 group policy, timeout or cancellation policy, duration, and exit
 classification.
 
-Status: released v0.1.0.
+Status: 0.1.0 implementation pending release evidence.
 
 CI: https://github.com/joshiii-xyz/process-diagnostics/actions
 
