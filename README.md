@@ -7,7 +7,7 @@ classification.
 
 Status: 0.1.0 implementation pending release evidence.
 
-CI: https://github.com/joshiii-xyz/process-diagnostics/actions
+CI: https://github.com/yoshiii-xyz/process-diagnostics/actions
 
 ## Install
 
