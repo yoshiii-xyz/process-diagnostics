@@ -5,7 +5,7 @@ edition = "2024"
 rust-version = "1.85"
 description = "Linux-first process execution diagnostics with bounded transcripts"
 license = "MIT"
-repository = "https://github.com/joshiii-xyz/process-diagnostics"
+repository = "https://github.com/yoshiii-xyz/process-diagnostics"
 keywords = ["process", "diagnostics", "signals", "timeout", "transcript"]
 categories = ["command-line-utilities", "development-tools"]
 
